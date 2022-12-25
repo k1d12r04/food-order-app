@@ -1,0 +1,31 @@
+.meal-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem;
+}
+
+.meal-info {
+  &__name {
+    font-weight: bold;
+  }
+
+  &__desc {
+    font-style: italic;
+  }
+  &__price {
+    font-weight: bold;
+    color: rgb(20, 148, 103);
+  }
+}
+
+.add-meal {
+  &__info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+}
