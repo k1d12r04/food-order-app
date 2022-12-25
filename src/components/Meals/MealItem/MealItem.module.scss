@@ -5,16 +5,15 @@
   margin-bottom: 2rem;
   border-bottom: 1px solid #ccc;
   padding: 1rem;
+  text-align: center;
 }
 
 .meal-info {
+  text-align: left;
   &__name {
     font-weight: bold;
   }
 
-  &__desc {
-    font-style: italic;
-  }
   &__price {
     font-weight: bold;
     color: rgb(20, 148, 103);
@@ -27,5 +26,21 @@
     gap: 1rem;
     align-items: center;
     margin-bottom: 1rem;
+  }
+  &__btn {
+    text-align: center;
+    &:hover,
+    &:active {
+      background-color: #164e26;
+      box-shadow: 0 2px 6px rgba(28, 69, 36, 0.612);
+    }
+  }
+  &__input {
+    width: 3rem;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 0.1rem 1rem;
+    padding-inline-start: 0.5rem;
   }
 }

@@ -4,26 +4,26 @@ import MealItem from '../MealItem/MealItem';
 const DUMMY_MEALS = [
   {
     id: 'm1',
-    name: 'Sushi',
-    description: 'Finest fish and veggies',
+    name: 'Püreli Tepsi Kebabı',
+    description: 'Püre ile kebabın enfes birleşimi',
     price: 22.99,
   },
   {
     id: 'm2',
-    name: 'Schnitzel',
-    description: 'A german specialty!',
+    name: 'Patatesli Havuçlu Bezelye',
+    description: 'Sebzeye doyacaksınız',
     price: 16.5,
   },
   {
     id: 'm3',
-    name: 'Barbecue Burger',
-    description: 'American, raw, meaty',
+    name: 'Güveçte Patatesli Kremalı Mantar',
+    description: 'Mantar sevenlere özel',
     price: 12.99,
   },
   {
     id: 'm4',
-    name: 'Green Bowl',
-    description: 'Healthy...and green...',
+    name: 'Sarımsaklı Kabak Püresi',
+    description: 'Fazla sağlıklı bir şey aranlara',
     price: 18.99,
   },
 ];
