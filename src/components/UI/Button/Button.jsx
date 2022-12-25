@@ -7,8 +7,7 @@ const Button = props => {
       className={`${styles.btn} ${props.className} `}
       onClick={props.onClick}
     >
-      {' '}
-      {props.children}{' '}
+      {props.children}
     </button>
   );
 };

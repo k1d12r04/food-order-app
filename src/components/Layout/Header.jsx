@@ -7,10 +7,10 @@ const Header = props => {
     <div className={styles['header-container']}>
       <div className={styles.container}>
         <header className={styles.header}>
-          <h1>React Meals</h1>
+          <h1> Lezzet Deryası </h1>
           <Cart className={styles.header__cart}>
             <img src="src/assets/cart.svg" alt="cart" />
-            <p>Your Cart</p>
+            <p>Sepetiniz</p>
             <Button className={styles.btn}>0</Button>
           </Cart>
         </header>
