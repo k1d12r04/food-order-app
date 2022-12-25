@@ -6,6 +6,7 @@ function App() {
   return (
     <Fragment>
       <Header />
+      <img className="img" src="src/assets/meals.jpg" alt="meals photo" />
     </Fragment>
   );
 }

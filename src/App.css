@@ -1,0 +1,8 @@
+.img {
+  clip-path: polygon(0 0, 100% 0, 100% 54%, 0 81%);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
