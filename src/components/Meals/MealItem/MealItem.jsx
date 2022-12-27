@@ -1,8 +1,25 @@
 import styles from './MealItem.module.scss';
 import Button from '../../UI/Button/Button';
 import Input from '../../UI/Input/Input';
+import { useContext, useState } from 'react';
+import OrderInfo from '../../../context/order-info';
 
 const MealItem = props => {
+  const { setSumAmount } = useContext(OrderInfo);
+
+  const [enteredAmount, setEnteredAmount] = useState(1);
+
+  const inputChangeHandler = e => {
+    setEnteredAmount(e.target.value);
+  };
+
+  const changeAmountHandler = () => {
+    setSumAmount(prevSumAmount => {
+      const updatedSumAmount = prevSumAmount + +enteredAmount;
+      return updatedSumAmount;
+    });
+  };
+
   return (
     <div className={styles['meal-item']}>
       <div className={styles['meal-info']}>
@@ -13,9 +30,19 @@ const MealItem = props => {
       <div className={styles['add-meal']}>
         <div className={styles['add-meal__info']}>
           <h3>Miktar</h3>
-          <Input type={'text'} className={styles['add-meal__input']} />
+          <Input
+            onChange={inputChangeHandler}
+            value={enteredAmount}
+            type={'number'}
+            className={styles['add-meal__input']}
+          />
         </div>
-        <Button className={styles['add-meal__btn']}>Ekle</Button>
+        <Button
+          onClick={changeAmountHandler}
+          className={styles['add-meal__btn']}
+        >
+          Ekle
+        </Button>
       </div>
     </div>
   );

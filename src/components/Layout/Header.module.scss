@@ -1,5 +1,7 @@
 .header-container {
   background-color: #181d31;
+  position: sticky;
+  top: 0;
 }
 
 .container {
@@ -24,14 +26,14 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    cursor: pointer;
+    &:hover {
+      background-color: #0d3731;
+    }
   }
   .btn {
     border: 2px solid #cbedd5;
     border-radius: 10rem;
     padding: 0.5rem 0.8rem;
-    &:hover {
-      background-color: #cbedd5;
-      color: #181d31;
-    }
   }
 }

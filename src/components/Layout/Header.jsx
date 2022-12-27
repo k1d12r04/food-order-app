@@ -1,8 +1,12 @@
+import { useContext } from 'react';
+import OrderInfo from '../../context/order-info';
 import Cart from '../Cart/Cart';
 import Button from '../UI/Button/Button';
 import styles from './Header.module.scss';
 
-const Header = props => {
+const Header = () => {
+  const { sumAmount } = useContext(OrderInfo);
+
   return (
     <div className={styles['header-container']}>
       <div className={styles.container}>
@@ -11,7 +15,7 @@ const Header = props => {
           <Cart className={styles.header__cart}>
             <img src="src/assets/cart.svg" alt="cart" />
             <p>Sepetiniz</p>
-            <Button className={styles.btn}>0</Button>
+            <Button className={styles.btn}> {sumAmount} </Button>
           </Cart>
         </header>
       </div>

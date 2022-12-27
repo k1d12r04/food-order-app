@@ -1,12 +1,20 @@
-import { Fragment } from 'react';
 import styles from './App.module.scss';
 import Header from './components/Layout/Header';
 import IntroCard from './components/IntroCard/IntroCard';
 import MealsList from './components/Meals/MealsList/MealsList';
+import OrderInfo from './context/order-info';
+import { useState } from 'react';
 
 function App() {
+  const [sumAmount, setSumAmount] = useState(0);
+
   return (
-    <Fragment>
+    <OrderInfo.Provider
+      value={{
+        sumAmount,
+        setSumAmount,
+      }}
+    >
       <Header />
       <img
         className={styles.img}
@@ -15,7 +23,7 @@ function App() {
       />
       <IntroCard />
       <MealsList />
-    </Fragment>
+    </OrderInfo.Provider>
   );
 }
 
