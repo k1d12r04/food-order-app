@@ -40,6 +40,7 @@ const MealsList = () => {
           name={meals.name}
           description={meals.description}
           price={meals.price}
+          defaultMeals={defaultMeals}
         />
       ))}
     </ul>

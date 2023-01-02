@@ -8,11 +8,15 @@ import { useState } from 'react';
 function App() {
   const [sumAmount, setSumAmount] = useState(0);
 
+  const [selectedMeals, setSelectedMeals] = useState([]);
+
   return (
     <OrderInfo.Provider
       value={{
         sumAmount,
         setSumAmount,
+        selectedMeals,
+        setSelectedMeals,
       }}
     >
       <Header />
